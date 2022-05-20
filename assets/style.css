@@ -1,0 +1,52 @@
+
+#container {
+    position: relative;
+    width: 550px;
+    height: 550px;
+    border: 3px solid #090080;
+    background-color: antiquewhite;
+    margin-left: 35%;
+    margin-top: 5%;
+    font-size: larger;
+}
+h1 {
+    text-align: center;
+}
+p{
+    padding-top: 5%;
+    padding-right : 5%;
+    position: relative;
+    text-align: center;
+    margin-left: 10%;
+}
+button {
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 45%;
+    
+}
+#totalTime {
+    float: right;
+}
+
+a {
+    margin-top: 0%;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 786px) {
+
+#container {
+position: absolute;
+margin-left: 5%;
+}
+
+}
+
+
+
