@@ -1,52 +1,219 @@
+/* Page-wide styles */
 
-#container {
-    position: relative;
-    width: 550px;
-    height: 550px;
-    border: 3px solid #090080;
-    background-color: antiquewhite;
-    margin-left: 35%;
-    margin-top: 5%;
-    font-size: larger;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1 {
-    text-align: center;
+
+body {
+    font-family: Raleway, sans-serif;
 }
-p{
-    padding-top: 5%;
-    padding-right : 5%;
-    position: relative;
-    text-align: center;
-    margin-left: 10%;
+
+/* Header - contains High Scores link and timer */
+
+header {
+    background-color: rgb(47, 128, 220);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
-button {
-    position: absolute;
-    margin-top: 30%;
-    margin-left: 45%;
+
+/* High Scores link */
+
+header div#hof {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header div#hof:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+/* Timer */
+
+header #time {
+    font-weight: bold;
+}
+
+/* Main container to display start, question, end of quiz, and High Scores divs */
+
+main .container {
+    width: 500px;
+    margin: 0 auto;
     
 }
-#totalTime {
-    float: right;
+
+@media screen and (max-width: 768px) {
+ main .container {
+     width: 300px;
+ }
 }
 
-a {
-    margin-top: 0%;
-}
-
-
-
-
-
-
-
-@media screen and (max-width: 786px) {
-
-#container {
-position: absolute;
-margin-left: 5%;
-}
-
+main .container h1 {
+    font-size: 1.5rem;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 
 
+/* Start screen div */
+
+main .container .start-div {
+    display: block;
+}
+
+main .container .start-div p {
+    padding-bottom: 20px;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+main div.start-btn {
+    display: flex;
+    justify-content: center;
+}
+
+main div.start-btn button {
+    background-color: rgb(160, 205, 221);
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 2px solid rgb(0, 75, 128);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+main div.start-btn button:hover {
+    background-color: rgb(226, 233, 235);
+}
+
+/* Question screen div */
+
+main .container .question-div {
+    display: none;
+}
+
+main .container .question-div .buttons {
+    margin-bottom: 10px;
+}
+
+main .container .question-div .buttons button {
+    display: block;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.4rem;
+    background-color: rgb(160, 205, 221);
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid rgb(0, 85, 128);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+main .container .question-div .buttons button:hover {
+    background-color: rgb(232, 232, 232);
+}
+
+/* Flash-messages Right or Wrong */
+
+main .container .question-div #right-wrong {
+    display: none;
+    transition: 0.3s;
+}
+
+main .container .question-div .right {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(181, 235, 181);
+    font-weight: bold;
+    font-style: italic;
+}
+
+main .container .question-div .wrong {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(235, 162, 162);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* End of quiz screen div */
+
+main .container .end-div {
+    display: none;
+}
+
+main .container .end-div h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+main .container .end-div form {
+    text-align: center;
+}
+
+main .container .end-div form input {
+    font-size: 1.2rem;
+}
+
+main .container .end-div label {
+    display: block;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+main .container .end-div button {
+    background-color: rgb(160, 205, 221);
+    font-size: 1.2rem;
+    padding: 2px 5px 2px 5px;
+    border: 2px solid rgb(0, 85, 128);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+main .container .end-div button:hover {
+    background-color: rgb(252, 253, 253);
+}
+
+/* High Scores screen div */
+
+main .container .high-scores {
+    display: none;
+}
+
+main .container .high-scores ol li {
+    padding: 10px 10px 10px 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+main .container .high-scores ol li:nth-child(odd) {
+    background-color:  rgb(208, 227, 235);
+}
+
+main .container .high-scores ol li:nth-child(even) {
+    background-color:  rgb(112, 147, 180);
+}
+
+main .container .high-scores div#hof-btns {
+    margin-top: 20px;
+}
+
+main .container .high-scores div#hof-btns button {
+    background-color: rgb(160, 205, 221);
+    font-size: 1.2rem;
+    padding: 2px 5px 2px 5px;
+    border: 2px solid rgb(0, 85, 128);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+main .container .high-scores div#hof-btns button:hover {
+    background-color: rgb(208, 227, 235);
+}
